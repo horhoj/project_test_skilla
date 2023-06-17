@@ -1,3 +1,14 @@
 .wrap {
   display: flex;
+  min-height: 100vh;
+}
+
+.left {
+  display: flex;
+  width: 240px;
+}
+
+.main {
+  display: flex;
+  flex-grow: 1;
 }

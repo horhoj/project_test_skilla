@@ -1,0 +1,44 @@
+.navLink {
+  text-decoration: none;
+}
+
+.wrap {
+  height: 52px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 0 12px;
+}
+
+.wrapActive {
+  background-color: rgba(216, 228, 251, 0.32);
+}
+
+.icon {
+}
+
+.iconWrap {
+  height: 15px;
+  width: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill-opacity: 0.56;
+}
+
+.iconWrapActive {
+  fill-opacity: 1 !important;
+}
+
+.text {
+  //font-family: 'SF Pro Display';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.textActive {
+  color: rgba(255, 255, 255, 1) !important;
+}

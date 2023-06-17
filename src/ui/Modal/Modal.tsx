@@ -1,7 +1,7 @@
 import { FC, ReactNode, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styles from './Modal.module.scss';
-import { Portal } from '~/components/Portal';
+import { Portal } from '~/ui/Portal';
 
 interface ModalProps {
   isOpen: boolean;

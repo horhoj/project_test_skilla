@@ -13,7 +13,7 @@ export const Router: FC = () => {
       <Routes>
         <Route
           path="/"
-          element={<Navigate to={getRoutePath('main')} />}
+          element={<Navigate to={getRoutePath('resultsPage')} />}
           key={MAIN_UNIQ_KEY}
         />
         {routeNameList.map((routeName) => {
