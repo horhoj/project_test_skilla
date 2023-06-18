@@ -3,6 +3,7 @@ import styles from './App.module.scss';
 import { Router } from '~/router/router';
 import { Spinner } from '~/ui/Spinner';
 import { MenuFeature } from '~/features/MenuFeature';
+import { TopBarFeature } from '~/features/TopBarFeature';
 
 export const App: React.FC = () => {
   const [isSpinnerShow, setIsSpinnerShow] = useState(true);
@@ -20,8 +21,11 @@ export const App: React.FC = () => {
         <div className={styles.left}>
           <MenuFeature />
         </div>
-        <div className={styles.main}>
-          <Router />
+        <div className={styles.right}>
+          <TopBarFeature />
+          <main className={styles.main}>
+            <Router />
+          </main>
         </div>
       </div>
     </>

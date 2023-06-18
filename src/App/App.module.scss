@@ -8,7 +8,14 @@
   width: 240px;
 }
 
+.right {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+}
+
 .main {
+  padding: 20px 120px;
   display: flex;
   flex-grow: 1;
 }

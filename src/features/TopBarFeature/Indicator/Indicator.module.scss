@@ -1,0 +1,51 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.top {
+  display: flex;
+  column-gap: 5px;
+
+}
+
+.colorText_green {
+  color: #00A775;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.colorText_yellow {
+  color: #FFB800;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.colorText_red {
+  color: #EA1A4F
+}
+
+.progressBarBackground {
+  width: 156px;
+  background-color: #DEE6F5;
+  height: 6px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 6px;
+}
+
+.progressBar_green {
+  background-color: #28A879;
+}
+
+.progressBar_yellow {
+  background-color: #FFD500;
+}
+
+.progressBar_red {
+  background-color: #EA1A4F;
+}
