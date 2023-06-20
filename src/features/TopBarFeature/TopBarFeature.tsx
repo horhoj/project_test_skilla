@@ -1,25 +1,27 @@
 import { FC } from 'react';
 import styles from './TopBarFeature.module.scss';
 import { CurrentDate } from '~/features/TopBarFeature/CurrentDate';
-import { indicatorListConfig } from '~/features/TopBarFeature/indicatorConfigs';
-import { Indicator } from '~/features/TopBarFeature/Indicator';
+import { IndicatorList } from '~/features/TopBarFeature/IndicatorList';
+import { TextDropDown } from '~/features/TopBarFeature/TextDropDown';
+import { UserProfile } from '~/features/TopBarFeature/UserProfile';
 
 interface TopBarFeatureProps {}
 
 export const TopBarFeature: FC<TopBarFeatureProps> = () => {
   return (
     <div className={styles.wrap}>
-      <CurrentDate />
+      <div className={styles.currentDateWrap}>
+        <CurrentDate />
+      </div>
       <div className={styles.indicatorListWrap}>
-        {indicatorListConfig.map((indicatorConfig) => (
-          <Indicator
-            key={indicatorConfig.id}
-            text={indicatorConfig.text}
-            colorText={indicatorConfig.colorText}
-            colorType={indicatorConfig.colorType}
-            progress={indicatorConfig.progress}
-          />
-        ))}
+        <IndicatorList />
+      </div>
+      <div className={styles.textDropDownWrap}>
+        <TextDropDown />
+      </div>
+
+      <div className={styles.textUserProfileWrap}>
+        <UserProfile />
       </div>
     </div>
   );

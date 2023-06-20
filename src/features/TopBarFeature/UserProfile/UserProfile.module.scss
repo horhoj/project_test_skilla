@@ -1,0 +1,110 @@
+.wrap {
+  min-width: 366px;
+  padding: 0 0 20px 0;
+}
+
+.userLogo {
+  background-color: #efefef;
+  border-radius: 50%;
+}
+
+.directorWrap {
+  padding: 20px 32px 0 32px;
+}
+
+.directorName {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.directorPositionAndPlace {
+  color: #5E7793;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.directorPositionAndPlaceMarker {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #5E7793;
+}
+
+.directorTelephone {
+  color: #5E7793;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  gap: 8px;
+  margin-top: 23px;
+  align-items: center;
+}
+
+.directorEmail {
+  color: #5E7793;
+  font-size: 15px;
+  font-weight: 400;
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  align-items: center;
+}
+
+.directorBorderBottom {
+  background-color: #EAF0FA;
+  height: 2px;
+  display: flex;
+  margin-top: 16px;
+}
+
+.departmentListWrap {
+
+}
+
+.departmentWrap {
+
+}
+
+.departmentName {
+  height: 48px;
+  color: #5E7793;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+}
+
+.departmentEmployeeList {
+
+}
+
+.departmentEmployeeWrap {
+  display: flex;
+  width: 100%;
+  height: 48px;
+  padding: 0 32px;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+
+  &:hover, &:focus {
+    background-color: #dee5fd;
+    color:  #0022CB;
+  }
+}
+
+.departmentEmployeeName {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 400;
+  color: #005FF8;
+
+
+}
