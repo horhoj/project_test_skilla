@@ -2,6 +2,7 @@ import { FC, ReactNode, useEffect, useRef } from 'react';
 import { CSSTransition } from 'react-transition-group';
 import styles from './Modal.module.scss';
 import { Portal } from '~/ui/Portal';
+import { useDocumentKeyTrap } from '~/hooks/useDocumentKeyTrap';
 
 interface ModalProps {
   isOpen: boolean;
@@ -19,6 +20,15 @@ export const Modal: FC<ModalProps> = ({ children, isOpen, onClose }) => {
     }
     document.body.classList.remove(styles.hideOverflow);
   }, [isOpen]);
+
+  useDocumentKeyTrap({
+    isEnabled: isOpen,
+    cb: (e) => {
+      if (e.code === 'Escape') {
+        onClose();
+      }
+    },
+  });
 
   return (
     <Portal>

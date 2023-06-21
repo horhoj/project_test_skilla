@@ -36,6 +36,8 @@ export const DropWrap: FC<DropWrapProps> = (props) => {
   };
 
   const handleChildKeydown = (e: KeyboardEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    e.stopPropagation();
     if (e.code === 'Escape') {
       setIsOpen(false);
     }
