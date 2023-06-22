@@ -1,5 +1,5 @@
-import userLogo from '~/assets/img/user_profile__logo.png';
-import employeeAvatar from '~/assets/img/user_profile__avatar.png';
+import userLogo from '~/assets/img/user_profile__user-foto.png';
+import employeeAvatar from '~/assets/img/user_profile__employee-foto.png';
 import { getUUID } from '~/utils/getUUID';
 
 interface Employee {

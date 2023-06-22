@@ -4,9 +4,11 @@ import styles from './UserProfile.module.scss';
 import { DropWrap } from '~/ui/DropWrap';
 import { userProfile } from '~/features/TopBarFeature/userProfileConfig';
 import { Avatar } from '~/ui/Avatar';
-import callIcon from '~/assets/img/user_profile__calls-24px.svg';
-import emailIcon from '~/assets/img/user_profile__email.svg';
-import avatarIcon from '~/assets/img/user_profile__avatar.png';
+import callIcon from '~/assets/img/user_profile__icon-calls-24px.svg';
+import emailIcon from '~/assets/img/user_profile__icon-email.svg';
+import avatarIcon from '~/assets/img/user_profile__employee-foto.png';
+import logoutIcon from '~/assets/img/user_profile__icon-logout.svg';
+import gotEmployeeIcon from '~/assets/img/user_profile__icon-goto-employee.svg';
 
 interface UserProfileProps {}
 
@@ -19,6 +21,9 @@ export const UserProfile: FC<UserProfileProps> = () => {
   return (
     <DropWrap titleRenderFn={userLogoRender} childrenMarginTop={0}>
       <div className={styles.wrap}>
+        <button className={styles.logoutBtn}>
+          <ReactSVG src={logoutIcon} />
+        </button>
         <div className={styles.directorWrap}>
           <div className={styles.directorName}>{userProfile.director.name}</div>
           <div className={styles.directorPositionAndPlace}>
@@ -26,14 +31,20 @@ export const UserProfile: FC<UserProfileProps> = () => {
             <span className={styles.directorPositionAndPlaceMarker} />
             {userProfile.director.place}
           </div>
-          <div className={styles.directorTelephone}>
+          <a
+            href={`tel:${userProfile.director.phone}`}
+            className={styles.directorTelephone}
+          >
             <ReactSVG src={callIcon} />
             <span>{userProfile.director.phone}</span>
-          </div>
-          <div className={styles.directorEmail}>
+          </a>
+          <a
+            href={`mailto:${userProfile.director.email}`}
+            className={styles.directorEmail}
+          >
             <ReactSVG src={emailIcon} />
             <span>{userProfile.director.email}</span>
-          </div>
+          </a>
           <div className={styles.directorBorderBottom} />
         </div>
         <div className={styles.departmentListWrap}>
@@ -42,7 +53,8 @@ export const UserProfile: FC<UserProfileProps> = () => {
               <div className={styles.departmentName}>{department.name}</div>
               <div className={styles.departmentEmployeeList}>
                 {department.EmployeeList.map((employee) => (
-                  <button
+                  <a
+                    href={'#'}
                     className={styles.departmentEmployeeWrap}
                     key={employee.id}
                   >
@@ -50,7 +62,10 @@ export const UserProfile: FC<UserProfileProps> = () => {
                       <Avatar src={avatarIcon} alt={'фото сотрудника'} />{' '}
                       <span>{employee.name}</span>
                     </span>
-                  </button>
+                    <span className={styles.departmentGotoEmployeeName}>
+                      <ReactSVG src={gotEmployeeIcon} />
+                    </span>
+                  </a>
                 ))}
               </div>
             </div>

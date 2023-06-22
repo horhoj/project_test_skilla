@@ -31,7 +31,6 @@
   background-color: rgba(0, 0, 0, 0);
   border: none;
   cursor: pointer;
-
 }
 
 .enter {
@@ -54,4 +53,20 @@
 
 .hideOverflow {
   overflow: hidden;
+}
+
+.openBtnIndicator {
+  transition: transform 300ms;
+
+  & svg {
+    fill: #ADBFDF;
+  }
+}
+
+.openBtnIndicatorActive {
+  transform: rotateZ(180deg);
+
+  & svg {
+    fill: #002CFB;
+  }
 }

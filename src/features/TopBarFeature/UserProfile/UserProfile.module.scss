@@ -1,6 +1,21 @@
 .wrap {
   min-width: 166px;
   padding: 0 0 20px 0;
+  position: relative;
+}
+
+.logoutBtn {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  cursor: pointer;
+  right: 20px;
+  top: 20px;
+
+  &:hover * {
+    color: #002CFB;
+    fill: #002CFB;
+  }
 }
 
 .userLogo {
@@ -15,6 +30,9 @@
 .directorName {
   font-size: 18px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .directorPositionAndPlace {
@@ -42,6 +60,12 @@
   gap: 8px;
   margin-top: 23px;
   align-items: center;
+  text-decoration: none;
+
+  &:hover * {
+    color: #002CFB;
+    fill: #002CFB;
+  }
 }
 
 .directorEmail {
@@ -52,6 +76,12 @@
   gap: 8px;
   margin-top: 8px;
   align-items: center;
+  text-decoration: none;
+
+  &:hover * {
+    color: #002CFB;
+    fill: #002CFB;
+  }
 }
 
 .directorBorderBottom {
@@ -91,10 +121,16 @@
   cursor: pointer;
   background-color: white;
   border: none;
+  text-decoration: none;
+  gap: 10px;
 
   &:hover, &:focus {
     background-color: #dee5fd;
     color: #0022CB;
+
+    & .departmentGotoEmployeeName {
+      visibility: visible;
+    }
   }
 }
 
@@ -111,4 +147,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
   }
+}
+
+.departmentGotoEmployeeName {
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  visibility: hidden;
 }
