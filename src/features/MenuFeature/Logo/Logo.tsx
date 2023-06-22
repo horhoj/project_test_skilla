@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import styles from './Logo.module.scss';
-import logo from '~/assets/logo.svg';
+import logo from '~/assets/img/logo.svg';
 
 interface LogoProps {}
 

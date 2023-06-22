@@ -12,7 +12,7 @@ import { ReactSVG } from 'react-svg';
 import FocusLock from 'react-focus-lock';
 import styles from './DropWrap.module.scss';
 import { useOutsideClick } from '~/hooks/useOutsideClick';
-import openIcon from '~/assets/drop_down__open-icon.svg';
+import openIcon from '~/assets/img/drop_down__open-icon.svg';
 
 interface DropWrapProps {
   titleRenderFn: () => ReactNode;
@@ -36,9 +36,9 @@ export const DropWrap: FC<DropWrapProps> = (props) => {
   };
 
   const handleChildKeydown = (e: KeyboardEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    e.stopPropagation();
     if (e.code === 'Escape') {
+      e.preventDefault();
+      e.stopPropagation();
       setIsOpen(false);
     }
   };

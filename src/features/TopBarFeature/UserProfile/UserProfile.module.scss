@@ -1,5 +1,5 @@
 .wrap {
-  min-width: 366px;
+  min-width: 166px;
   padding: 0 0 20px 0;
 }
 
@@ -94,7 +94,7 @@
 
   &:hover, &:focus {
     background-color: #dee5fd;
-    color:  #0022CB;
+    color: #0022CB;
   }
 }
 
@@ -106,5 +106,9 @@
   font-weight: 400;
   color: #005FF8;
 
-
+  & > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

@@ -4,9 +4,9 @@ import styles from './UserProfile.module.scss';
 import { DropWrap } from '~/ui/DropWrap';
 import { userProfile } from '~/features/TopBarFeature/userProfileConfig';
 import { Avatar } from '~/ui/Avatar';
-import callIcon from '~/assets/user_profile__calls-24px.svg';
-import emailIcon from '~/assets/user_profile__email.svg';
-import avatarIcon from '~/assets/user_profile__avatar.png';
+import callIcon from '~/assets/img/user_profile__calls-24px.svg';
+import emailIcon from '~/assets/img/user_profile__email.svg';
+import avatarIcon from '~/assets/img/user_profile__avatar.png';
 
 interface UserProfileProps {}
 

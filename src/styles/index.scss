@@ -1,7 +1,7 @@
 *,
 *::before,
 *::after {
-  font-family: Roboto, sans-serif;
+  font-family: SF Pro Display, sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -26,4 +26,20 @@
 
 
 
+@font-face {
+  font-weight: 400; /* Соответствует значению normal */
+  font-family: SF Pro Display;
+  src: url("../assets/fonts/SF-Pro-Display-Regular.otf");
+}
 
+@font-face {
+  font-weight: 700; /* Соответствует значению bold */
+  font-family: SF Pro Display;
+  src: url("../assets/fonts/SF-Pro-Display-Bold.otf");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: SF Pro Display;
+  src: url("../assets/fonts/SF-Pro-Display-Semibold.otf");
+}

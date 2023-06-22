@@ -1,15 +1,15 @@
 import { getRoutePath } from '~/router';
 import { getUUID } from '~/utils/getUUID';
-import iconResults from '~/assets/menu-feature__icon-results.svg';
-import iconOrders from '~/assets/menu-feature__icon-orders.svg';
-import iconCounterparties from '~/assets/menu_featurs__icon-counterparties.svg';
-import iconCalls from '~/assets/menu_featurs__icon-calls.svg';
-import iconMessages from '~/assets/menu_featurs__icon-messages.svg';
-import iconDocuments from '~/assets/menu_featurs__icon-documents.svg';
-import iconExecutors from '~/assets/menu_featurs__icon-executors.svg';
-import iconReports from '~/assets/menu_featurs__icon-reports.svg';
-import iconKnowledgeBase from '~/assets/menu_featurs__icon-knowledge-base.svg';
-import iconOptions from '~/assets/menu_featurs__icon-options.svg';
+import iconResults from '~/assets/img/menu-feature__icon-results.svg';
+import iconOrders from '~/assets/img/menu-feature__icon-orders.svg';
+import iconCounterparties from '~/assets/img/menu_featurs__icon-counterparties.svg';
+import iconCalls from '~/assets/img/menu_featurs__icon-calls.svg';
+import iconMessages from '~/assets/img/menu_featurs__icon-messages.svg';
+import iconDocuments from '~/assets/img/menu_featurs__icon-documents.svg';
+import iconExecutors from '~/assets/img/menu_featurs__icon-executors.svg';
+import iconReports from '~/assets/img/menu_featurs__icon-reports.svg';
+import iconKnowledgeBase from '~/assets/img/menu_featurs__icon-knowledge-base.svg';
+import iconOptions from '~/assets/img/menu_featurs__icon-options.svg';
 
 interface MenuItemConfig {
   id: string;
