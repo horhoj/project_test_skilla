@@ -9,12 +9,12 @@ import {
   MouseEvent,
 } from 'react';
 import { CSSTransition } from 'react-transition-group';
-import { ReactSVG } from 'react-svg';
 import FocusLock from 'react-focus-lock';
 import classNames from 'classnames';
 import styles from './DropWrap.module.scss';
 import { useOutsideClick } from '~/hooks/useOutsideClick';
 import openIcon from '~/assets/img/drop_down__open-icon.svg';
+import { Svg } from '~/ui/Svg';
 
 interface DropWrapProps {
   titleRenderFn: () => ReactNode;
@@ -72,7 +72,7 @@ export const DropWrap: FC<DropWrapProps> = (props) => {
           className={styles.openBtn}
           ref={openBtnRef}
         >
-          <ReactSVG
+          <Svg
             src={openIcon}
             className={classNames(
               styles.openBtnIndicator,

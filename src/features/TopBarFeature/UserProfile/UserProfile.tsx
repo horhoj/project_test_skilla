@@ -1,5 +1,4 @@
 import { FC, useCallback } from 'react';
-import { ReactSVG } from 'react-svg';
 import styles from './UserProfile.module.scss';
 import { DropWrap } from '~/ui/DropWrap';
 import { userProfile } from '~/features/TopBarFeature/userProfileConfig';
@@ -9,6 +8,7 @@ import emailIcon from '~/assets/img/user_profile__icon-email.svg';
 import avatarIcon from '~/assets/img/user_profile__employee-foto.png';
 import logoutIcon from '~/assets/img/user_profile__icon-logout.svg';
 import gotEmployeeIcon from '~/assets/img/user_profile__icon-goto-employee.svg';
+import { Svg } from '~/ui/Svg';
 
 interface UserProfileProps {}
 
@@ -22,7 +22,7 @@ export const UserProfile: FC<UserProfileProps> = () => {
     <DropWrap titleRenderFn={userLogoRender} childrenMarginTop={0}>
       <div className={styles.wrap}>
         <button className={styles.logoutBtn}>
-          <ReactSVG src={logoutIcon} />
+          <Svg src={logoutIcon} />
         </button>
         <div className={styles.directorWrap}>
           <div className={styles.directorName}>{userProfile.director.name}</div>
@@ -35,14 +35,14 @@ export const UserProfile: FC<UserProfileProps> = () => {
             href={`tel:${userProfile.director.phone}`}
             className={styles.directorTelephone}
           >
-            <ReactSVG src={callIcon} />
+            <Svg src={callIcon} />
             <span>{userProfile.director.phone}</span>
           </a>
           <a
             href={`mailto:${userProfile.director.email}`}
             className={styles.directorEmail}
           >
-            <ReactSVG src={emailIcon} />
+            <Svg src={emailIcon} />
             <span>{userProfile.director.email}</span>
           </a>
           <div className={styles.directorBorderBottom} />
@@ -63,7 +63,7 @@ export const UserProfile: FC<UserProfileProps> = () => {
                       <span>{employee.name}</span>
                     </span>
                     <span className={styles.departmentGotoEmployeeName}>
-                      <ReactSVG src={gotEmployeeIcon} />
+                      <Svg src={gotEmployeeIcon} />
                     </span>
                   </a>
                 ))}

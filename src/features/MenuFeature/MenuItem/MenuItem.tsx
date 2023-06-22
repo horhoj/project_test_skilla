@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { NavLink } from 'react-router-dom';
-import { ReactSVG } from 'react-svg';
 import classNames from 'classnames';
 import styles from './MenuItem.module.scss';
+import { Svg } from '~/ui/Svg';
 
 interface MenuItemProps {
   icon: string;
@@ -19,7 +19,7 @@ export const MenuItem: FC<MenuItemProps> = (props) => {
           className={classNames(styles.wrap, isActive && styles.wrapActive)}
         >
           <span className={styles.iconWrap}>
-            <ReactSVG
+            <Svg
               src={props.icon}
               className={classNames(isActive && styles.iconWrapActive)}
             />
