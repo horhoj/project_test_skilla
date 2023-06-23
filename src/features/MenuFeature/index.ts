@@ -1,1 +1,1 @@
-export * from './MenuFeature';
+export * from '~/features/MenuFeature/containers/MenuFeatureContainer';

@@ -10,16 +10,9 @@ import iconExecutors from '~/assets/img/menu_featurs__icon-executors.svg';
 import iconReports from '~/assets/img/menu_featurs__icon-reports.svg';
 import iconKnowledgeBase from '~/assets/img/menu_featurs__icon-knowledge-base.svg';
 import iconOptions from '~/assets/img/menu_featurs__icon-options.svg';
+import { MenuDataItem } from '~/features/MenuFeature/types';
 
-interface MenuItemConfig {
-  id: string;
-  icon: string;
-  title: string;
-  to: string;
-  alt: string;
-}
-
-export const menuConfig: MenuItemConfig[] = [
+export const menuData: MenuDataItem[] = [
   {
     id: getUUID(),
     title: 'Итоги',

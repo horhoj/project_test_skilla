@@ -1,8 +1,6 @@
 import { FC } from 'react';
 import styles from './CurrentDate.module.scss';
 
-interface CurrentDateProps {}
-
 const getWeekday = (date: Date, locale = 'ru') => {
   const result = date.toLocaleString(locale, { weekday: 'long' });
   return `${result.slice(0, 1).toUpperCase()}${result.slice(1)}`;
@@ -14,12 +12,14 @@ const getDay = (date: Date, locale = 'ru') =>
 const getMonth = (date: Date, locale = 'ru') =>
   date.toLocaleString(locale, { month: 'short' }).slice(0, 3);
 
-export const CurrentDate: FC<CurrentDateProps> = () => {
-  const currentDate = new Date();
+interface CurrentDateProps {
+  currentDate: Date;
+}
 
-  const weekday = getWeekday(currentDate);
-  const day = getDay(currentDate);
-  const month = getMonth(currentDate);
+export const CurrentDate: FC<CurrentDateProps> = (props) => {
+  const weekday = getWeekday(props.currentDate);
+  const day = getDay(props.currentDate);
+  const month = getMonth(props.currentDate);
 
   return (
     <div className={styles.wrap}>

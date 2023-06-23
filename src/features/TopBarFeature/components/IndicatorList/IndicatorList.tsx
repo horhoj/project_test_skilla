@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import styles from './IndicatorList.module.scss';
-import { indicatorListConfig } from '~/features/TopBarFeature/indicatorConfigs';
-import { Indicator } from '~/features/TopBarFeature/Indicator';
+import { indicatorListConfig } from '~/features/TopBarFeature/dataMock/indicatorConfigs';
+import { Indicator } from '~/features/TopBarFeature/components/Indicator';
 
 interface IndicatorListProps {}
 

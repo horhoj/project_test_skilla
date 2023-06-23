@@ -1,33 +1,9 @@
 import userLogo from '~/assets/img/user_profile__user-foto.png';
 import employeeAvatar from '~/assets/img/user_profile__employee-foto.png';
 import { getUUID } from '~/utils/getUUID';
+import { UserProfileData } from '~/features/TopBarFeature/types';
 
-interface Employee {
-  id: string;
-  name: string;
-  avatarImg: string;
-}
-
-interface Department {
-  id: string;
-  name: string;
-  EmployeeList: Employee[];
-}
-
-interface UserProfile {
-  userLogo: string;
-  director: {
-    name: string;
-    position: string;
-    place: string;
-    phone: string;
-    email: string;
-  };
-
-  departmentList: Department[];
-}
-
-export const userProfile: UserProfile = {
+export const userProfileData: UserProfileData = {
   userLogo,
   director: {
     name: 'Упоров Кирилл',

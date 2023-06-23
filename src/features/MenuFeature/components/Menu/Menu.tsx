@@ -1,18 +1,20 @@
 import { FC } from 'react';
 import styles from './MenuFeature.module.scss';
-import { Logo } from '~/features/MenuFeature/Logo';
-import { MenuItem } from '~/features/MenuFeature/MenuItem';
-import { menuConfig } from '~/features/MenuFeature/menuConfig';
+import { Logo } from '~/features/MenuFeature/components/Logo';
+import { MenuItem } from '~/features/MenuFeature/components/MenuItem';
+import { MenuDataItem } from '~/features/MenuFeature/types';
 
-interface MenuFeatureProps {}
+interface MenuProps {
+  menuData: MenuDataItem[];
+}
 
-export const MenuFeature: FC<MenuFeatureProps> = () => {
+export const Menu: FC<MenuProps> = (props) => {
   return (
     <div className={styles.wrap}>
       <Logo />
 
       <nav className={styles.nav}>
-        {menuConfig.map((menuItem) => (
+        {props.menuData.map((menuItem) => (
           <MenuItem
             key={menuItem.id}
             icon={menuItem.icon}

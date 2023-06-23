@@ -1,1 +1,1 @@
-export * from './TopBarFeature';
+export * from '~/features/TopBarFeature/containers/TopBarContainer';
